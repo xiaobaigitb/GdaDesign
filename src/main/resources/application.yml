@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/spring-boot-gda?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: 1234
+#    url: jdbc:mysql://localhost:3306/spring-boot-blog?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+
+    # \u5F15\u5165\u963F\u91CC\u5F97\u6570\u636E\u6E90
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 20
+    minIdle: 25
+    maxActive: 100
+
+  # \u4F7F\u7528jpa
+  jpa:
+    # jpa\u5E95\u5C42\u4F7F\u7528\u4E86hibernate
+    hibernate:
+      # \u4FDD\u6301\u66F4\u65B0 \u542F\u52A8springboot\u65F6\u540C\u6B65\u5B9E\u4F53\u7C7B\u548C\u6570\u636E\u5E93
+      ddl-auto: update
+    show-sql: true
+
+
+#\u8BBE\u7F6E\u9879\u76EE\u6839\u8DEF\u5F84
+server:
+  servlet:
+    context-path: /gda
